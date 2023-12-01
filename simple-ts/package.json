@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "tsc -w",
     "dev": "nodemon -w build -q build/index.js",
-    "compile": "concurrently -k -n COMPILER,NODEMON -c blue,green 'tsc -w' 'nodemon -w build -q build/index.js'"
+    "compile": "node_modules/.bin/concurrently -k -n COMPILER,NODEMON -c blue,green 'tsc -w' 'nodemon -w build -q build/index.js'",
+    "dev2":"concurrently -k -n COMPILER,NODEMON -c yellow,blue \"tsc -w\" \"nodemon -w build -q build/index.js\""
   },
   "keywords": [],
   "author": "",
